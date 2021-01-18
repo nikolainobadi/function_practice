@@ -19,6 +19,10 @@
 		E854CEA325B629FA0066726F /* NiblessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854CEA225B629FA0066726F /* NiblessVC.swift */; };
 		E854CEA625B62A180066726F /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854CEA525B62A180066726F /* UIExtensions.swift */; };
 		E8FCF88E25B62BF200F3AACF /* PremiumDetail_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FCF88D25B62BF200F3AACF /* PremiumDetail_VC.swift */; };
+		E8FCF89325B62C6C00F3AACF /* Home_RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FCF89225B62C6C00F3AACF /* Home_RootView.swift */; };
+		E8FCF89625B62CED00F3AACF /* Home_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FCF89525B62CED00F3AACF /* Home_Manager.swift */; };
+		E8FCF89A25B62D3200F3AACF /* PaySummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FCF89925B62D3200F3AACF /* PaySummary.swift */; };
+		E8FCF89E25B62D4000F3AACF /* Premium.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FCF89D25B62D4000F3AACF /* Premium.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		E854CEA225B629FA0066726F /* NiblessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessVC.swift; sourceTree = "<group>"; };
 		E854CEA525B62A180066726F /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		E8FCF88D25B62BF200F3AACF /* PremiumDetail_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumDetail_VC.swift; sourceTree = "<group>"; };
+		E8FCF89225B62C6C00F3AACF /* Home_RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home_RootView.swift; sourceTree = "<group>"; };
+		E8FCF89525B62CED00F3AACF /* Home_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home_Manager.swift; sourceTree = "<group>"; };
+		E8FCF89925B62D3200F3AACF /* PaySummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaySummary.swift; sourceTree = "<group>"; };
+		E8FCF89D25B62D4000F3AACF /* Premium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Premium.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +104,7 @@
 		E854CE8A25B628F00066726F /* ViewLogic */ = {
 			isa = PBXGroup;
 			children = (
+				E8FCF89225B62C6C00F3AACF /* Home_RootView.swift */,
 			);
 			path = ViewLogic;
 			sourceTree = "<group>";
@@ -111,6 +120,7 @@
 		E854CE8C25B628F80066726F /* ManagerLogic */ = {
 			isa = PBXGroup;
 			children = (
+				E8FCF89525B62CED00F3AACF /* Home_Manager.swift */,
 			);
 			path = ManagerLogic;
 			sourceTree = "<group>";
@@ -147,7 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				E854CE8825B628D50066726F /* Application */,
-				E8FCF88825B62BBD00F3AACF /* Modules */,
+				E8FCF89825B62D1800F3AACF /* Models */,
+				E8FCF88825B62BBD00F3AACF /* AppModules */,
 				E854CE9025B629350066726F /* CoreAdditions */,
 				E854CE9325B629750066726F /* Designs */,
 			);
@@ -164,13 +175,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		E8FCF88825B62BBD00F3AACF /* Modules */ = {
+		E8FCF88825B62BBD00F3AACF /* AppModules */ = {
 			isa = PBXGroup;
 			children = (
 				E854CE8925B628E60066726F /* Home */,
 				E8FCF88925B62BC600F3AACF /* PremiumDetail */,
 			);
-			path = Modules;
+			path = AppModules;
 			sourceTree = "<group>";
 		};
 		E8FCF88925B62BC600F3AACF /* PremiumDetail */ = {
@@ -203,6 +214,15 @@
 			children = (
 			);
 			path = ViewLogic;
+			sourceTree = "<group>";
+		};
+		E8FCF89825B62D1800F3AACF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E8FCF89925B62D3200F3AACF /* PaySummary.swift */,
+				E8FCF89D25B62D4000F3AACF /* Premium.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,14 +294,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8FCF89625B62CED00F3AACF /* Home_Manager.swift in Sources */,
+				E8FCF89A25B62D3200F3AACF /* PaySummary.swift in Sources */,
 				E854CE9825B629750066726F /* ShadowField.swift in Sources */,
 				E854CE9925B629750066726F /* BoringLabel.swift in Sources */,
+				E8FCF89325B62C6C00F3AACF /* Home_RootView.swift in Sources */,
 				E854CE7225B628C30066726F /* AppDelegate.swift in Sources */,
 				E854CEA325B629FA0066726F /* NiblessVC.swift in Sources */,
 				E854CEA625B62A180066726F /* UIExtensions.swift in Sources */,
 				E854CE8E25B629190066726F /* Home_VC.swift in Sources */,
 				E854CE7425B628C30066726F /* SceneDelegate.swift in Sources */,
 				E854CE9F25B629E00066726F /* NiblessView.swift in Sources */,
+				E8FCF89E25B62D4000F3AACF /* Premium.swift in Sources */,
 				E854CE9725B629750066726F /* ShadowButton.swift in Sources */,
 				E8FCF88E25B62BF200F3AACF /* PremiumDetail_VC.swift in Sources */,
 			);
