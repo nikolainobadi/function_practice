@@ -25,6 +25,8 @@ class PremiumDetail_RootView: NiblessView {
         super.init(frame: .zero)
         addSubviews()
         setupConstraints()
+        
+        backgroundColor = .white
     }
     
     override func updateConstraints() {

@@ -13,3 +13,10 @@ struct Premium {
     var rate: Float
     var oneTime: Bool
 }
+
+extension Premium {
+    
+    static var empty: Premium {
+        return Premium(name: "", rate: 0, oneTime: false)
+    }
+}

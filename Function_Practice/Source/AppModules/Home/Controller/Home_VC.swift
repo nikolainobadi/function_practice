@@ -40,3 +40,21 @@ class Home_VC: NiblessVC {
         navigationItem.rightBarButtonItem = rootView.addPremiumButton
     }
 }
+
+extension Home_VC: Home_UIResponder {
+    
+    // MARK: - UIResponder
+    func showPremiumDetail(_ premium: Premium?) {
+        let premium = premium ?? Premium.empty
+        let vc = makePremiumDetail_VC(premium)
+        present(vc, animated: true, completion: nil)
+    }
+    
+    private func makePremiumDetail_VC(_ premium: Premium) -> PremiumDetail_VC {
+        let rootView = PremiumDetail_RootView()
+        let manager = PremiumDetail_Manager()
+        let vc = PremiumDetail_VC(rootView: rootView, manager: manager)
+        
+        return vc
+    }
+}

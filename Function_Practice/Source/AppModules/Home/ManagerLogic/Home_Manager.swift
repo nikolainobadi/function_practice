@@ -7,5 +7,6 @@
 
 class Home_Manager {
     
-    
+    // MARK: - PROPERTIES
+    var summary = PaySummary()
 }

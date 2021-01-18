@@ -10,7 +10,7 @@ import UIKit
 class Home_RootView: NiblessView {
     
     // MARK: - RESPONDER
-    
+    weak var responder: Home_UIResponder?
     
     
     // MARK: - VIEWS
@@ -48,6 +48,6 @@ class Home_RootView: NiblessView {
     // MARK: - ACTIONS
     @objc
     func didTapAddButton() {
-        
+        responder?.showPremiumDetail(nil)
     }
 }

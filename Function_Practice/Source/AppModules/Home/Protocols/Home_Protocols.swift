@@ -7,5 +7,5 @@
 
 // MARK: UIResponder
 protocol Home_UIResponder: AnyObject {
-    func showPremiumDetail(_ premium: Premium) 
+    func showPremiumDetail(_ premium: Premium?) 
 }
