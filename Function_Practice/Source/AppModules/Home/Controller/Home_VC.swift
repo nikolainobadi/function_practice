@@ -51,10 +51,20 @@ extension Home_VC: Home_UIResponder {
     }
     
     private func makePremiumDetail_VC(_ premium: Premium) -> PremiumDetail_VC {
+        
         let rootView = PremiumDetail_RootView()
-        let manager = PremiumDetail_Manager()
+        let manager = PremiumDetail_Manager(premium)
         let vc = PremiumDetail_VC(rootView: rootView, manager: manager)
         
+        rootView.responder = manager
+        
         return vc
+    }
+}
+
+extension Home_VC: Home_SubResponder {
+    
+    func addPremium(_ premium: Premium) {
+        
     }
 }

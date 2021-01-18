@@ -6,5 +6,6 @@
 //
 
 protocol PremiumDetail_UIResponder: AnyObject {
-    
+    func toggleOneTime()
+    func addPremiumToSummary()
 }

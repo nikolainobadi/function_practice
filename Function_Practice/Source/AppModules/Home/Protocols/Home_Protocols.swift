@@ -9,3 +9,9 @@
 protocol Home_UIResponder: AnyObject {
     func showPremiumDetail(_ premium: Premium?) 
 }
+
+
+// MARK: - SubResponder
+protocol Home_SubResponder: AnyObject {
+    func addPremium(_ premium: Premium)
+}

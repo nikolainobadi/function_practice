@@ -10,12 +10,37 @@ import UIKit
 class PremiumDetail_RootView: NiblessView {
     
     // MARK: - RESPONDER
-    
+    weak var responder: PremiumDetail_UIResponder?
     
     
     // MARK: - VIEWS
+    let nameField: ShadowField = {
+        let field = ShadowField()
+        return field
+    }()
+    
+    let rateField: ShadowField = {
+        let field = ShadowField()
+        return field
+    }()
+    
+    lazy var oneTimeToggle: UISwitch = {
+        let toggle = UISwitch()
+        toggle.addTarget(self, action: #selector(didChangeOneTimeToggle), for: .valueChanged)
+        return toggle
+    }()
+    
     lazy var addPremiumButton: UIBarButtonItem = {
         let button = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAddButton))
+        return button
+    }()
+    
+    lazy var saveButton: ShadowButton = {
+        let button = ShadowButton()
+        
+        button.setTitle("Save", for: .normal)
+        button.addTarget(self, action: #selector(didTapSaveButton(_:)), for: .touchUpInside)
+        
         return button
     }()
     
@@ -37,7 +62,10 @@ class PremiumDetail_RootView: NiblessView {
     
     // MARK: - DISPLAYS SETUP
     func addSubviews() {
-        
+        addSubview(nameField)
+        addSubview(rateField)
+        addSubview(oneTimeToggle)
+        addSubview(saveButton)
     }
     
     func setupConstraints() {
@@ -50,11 +78,16 @@ class PremiumDetail_RootView: NiblessView {
     func didTapAddButton() {
         
     }
-}
-
-extension PremiumDetail_VC: PremiumDetail_UIResponder {
     
-    // MARK: - UIResponder
+    @objc
+    func didChangeOneTimeToggle() {
+        
+    }
     
+    @objc
+    func didTapSaveButton(_ sender: UIButton) {
+        sender.pulse()
+        
+    }
 }
 
