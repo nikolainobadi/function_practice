@@ -18,6 +18,7 @@
 		E854CE9F25B629E00066726F /* NiblessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854CE9E25B629E00066726F /* NiblessView.swift */; };
 		E854CEA325B629FA0066726F /* NiblessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854CEA225B629FA0066726F /* NiblessVC.swift */; };
 		E854CEA625B62A180066726F /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854CEA525B62A180066726F /* UIExtensions.swift */; };
+		E8FCF88E25B62BF200F3AACF /* PremiumDetail_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FCF88D25B62BF200F3AACF /* PremiumDetail_VC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		E854CE9E25B629E00066726F /* NiblessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessView.swift; sourceTree = "<group>"; };
 		E854CEA225B629FA0066726F /* NiblessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessVC.swift; sourceTree = "<group>"; };
 		E854CEA525B62A180066726F /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
+		E8FCF88D25B62BF200F3AACF /* PremiumDetail_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumDetail_VC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,7 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				E854CE8825B628D50066726F /* Application */,
-				E854CE8925B628E60066726F /* Home */,
+				E8FCF88825B62BBD00F3AACF /* Modules */,
 				E854CE9025B629350066726F /* CoreAdditions */,
 				E854CE9325B629750066726F /* Designs */,
 			);
@@ -160,6 +162,47 @@
 				E854CE7A25B628C40066726F /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		E8FCF88825B62BBD00F3AACF /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				E854CE8925B628E60066726F /* Home */,
+				E8FCF88925B62BC600F3AACF /* PremiumDetail */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		E8FCF88925B62BC600F3AACF /* PremiumDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E8FCF88C25B62BE100F3AACF /* ViewLogic */,
+				E8FCF88B25B62BDB00F3AACF /* Controller */,
+				E8FCF88A25B62BD500F3AACF /* ManagerLogic */,
+			);
+			path = PremiumDetail;
+			sourceTree = "<group>";
+		};
+		E8FCF88A25B62BD500F3AACF /* ManagerLogic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ManagerLogic;
+			sourceTree = "<group>";
+		};
+		E8FCF88B25B62BDB00F3AACF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E8FCF88D25B62BF200F3AACF /* PremiumDetail_VC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E8FCF88C25B62BE100F3AACF /* ViewLogic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewLogic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +283,7 @@
 				E854CE7425B628C30066726F /* SceneDelegate.swift in Sources */,
 				E854CE9F25B629E00066726F /* NiblessView.swift in Sources */,
 				E854CE9725B629750066726F /* ShadowButton.swift in Sources */,
+				E8FCF88E25B62BF200F3AACF /* PremiumDetail_VC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
