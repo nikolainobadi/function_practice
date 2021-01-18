@@ -25,6 +25,8 @@ class Home_RootView: NiblessView {
         super.init(frame: .zero)
         addSubviews()
         setupConstraints()
+        
+        backgroundColor = .white
     }
     
     override func updateConstraints() {
@@ -48,10 +50,4 @@ class Home_RootView: NiblessView {
     func didTapAddButton() {
         
     }
-}
-
-extension Home_RootView: Home_Interface{
-    
-    // MARK: - Interface
-    
 }

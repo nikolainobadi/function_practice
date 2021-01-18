@@ -11,11 +11,11 @@ class Home_VC: NiblessVC {
     let manager: Home_Manager
     
     // MARK: - VIEWS
-    let rootView: Home_Interface
+    let rootView: Home_RootView
     
     
     // MARK: - INITIALIZATION
-    init(rootView: Home_Interface, manager: Home_Manager) {
+    init(rootView: Home_RootView, manager: Home_Manager) {
         
         self.rootView = rootView
         self.manager = manager
@@ -24,7 +24,19 @@ class Home_VC: NiblessVC {
     
     
     // MARK: - LIFE CYCLE
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupNavBar()
+    }
+    
     override func loadView() {
         view = rootView
+    }
+    
+    
+    // MARK: - DISPLAY SETUP
+    func setupNavBar() {
+        navigationItem.rightBarButtonItem = rootView.addPremiumButton
     }
 }
