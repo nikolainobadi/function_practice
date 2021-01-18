@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		E854CE7225B628C30066726F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854CE7125B628C30066726F /* AppDelegate.swift */; };
 		E854CE7425B628C30066726F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854CE7325B628C30066726F /* SceneDelegate.swift */; };
-		E854CE7625B628C30066726F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854CE7525B628C30066726F /* ViewController.swift */; };
-		E854CE7925B628C30066726F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E854CE7725B628C30066726F /* Main.storyboard */; };
 		E854CE7B25B628C40066726F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E854CE7A25B628C40066726F /* Assets.xcassets */; };
 		E854CE7E25B628C40066726F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E854CE7C25B628C40066726F /* LaunchScreen.storyboard */; };
+		E854CE8E25B629190066726F /* Home_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854CE8D25B629190066726F /* Home_VC.swift */; };
+		E854CE9725B629750066726F /* ShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854CE9425B629750066726F /* ShadowButton.swift */; };
+		E854CE9825B629750066726F /* ShadowField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854CE9525B629750066726F /* ShadowField.swift */; };
+		E854CE9925B629750066726F /* BoringLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854CE9625B629750066726F /* BoringLabel.swift */; };
+		E854CE9F25B629E00066726F /* NiblessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854CE9E25B629E00066726F /* NiblessView.swift */; };
+		E854CEA325B629FA0066726F /* NiblessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854CEA225B629FA0066726F /* NiblessVC.swift */; };
+		E854CEA625B62A180066726F /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854CEA525B62A180066726F /* UIExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E854CE6E25B628C30066726F /* Function_Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Function_Practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E854CE7125B628C30066726F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E854CE7325B628C30066726F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E854CE7525B628C30066726F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E854CE7825B628C30066726F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E854CE7A25B628C40066726F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E854CE7D25B628C40066726F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E854CE7F25B628C40066726F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E854CE8D25B629190066726F /* Home_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home_VC.swift; sourceTree = "<group>"; };
+		E854CE9425B629750066726F /* ShadowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowButton.swift; sourceTree = "<group>"; };
+		E854CE9525B629750066726F /* ShadowField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowField.swift; sourceTree = "<group>"; };
+		E854CE9625B629750066726F /* BoringLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoringLabel.swift; sourceTree = "<group>"; };
+		E854CE9E25B629E00066726F /* NiblessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessView.swift; sourceTree = "<group>"; };
+		E854CEA225B629FA0066726F /* NiblessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessVC.swift; sourceTree = "<group>"; };
+		E854CEA525B62A180066726F /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,100 @@
 		E854CE7025B628C30066726F /* Function_Practice */ = {
 			isa = PBXGroup;
 			children = (
-				E854CE7125B628C30066726F /* AppDelegate.swift */,
-				E854CE7325B628C30066726F /* SceneDelegate.swift */,
-				E854CE7525B628C30066726F /* ViewController.swift */,
-				E854CE7725B628C30066726F /* Main.storyboard */,
-				E854CE7A25B628C40066726F /* Assets.xcassets */,
-				E854CE7C25B628C40066726F /* LaunchScreen.storyboard */,
-				E854CE7F25B628C40066726F /* Info.plist */,
+				E854CEA925B62A390066726F /* Source */,
+				E854CEAA25B62A3C0066726F /* Resources */,
 			);
 			path = Function_Practice;
+			sourceTree = "<group>";
+		};
+		E854CE8825B628D50066726F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E854CE7325B628C30066726F /* SceneDelegate.swift */,
+				E854CE7125B628C30066726F /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		E854CE8925B628E60066726F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E854CE8A25B628F00066726F /* ViewLogic */,
+				E854CE8B25B628F40066726F /* Controller */,
+				E854CE8C25B628F80066726F /* ManagerLogic */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E854CE8A25B628F00066726F /* ViewLogic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewLogic;
+			sourceTree = "<group>";
+		};
+		E854CE8B25B628F40066726F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E854CE8D25B629190066726F /* Home_VC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E854CE8C25B628F80066726F /* ManagerLogic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ManagerLogic;
+			sourceTree = "<group>";
+		};
+		E854CE9025B629350066726F /* CoreAdditions */ = {
+			isa = PBXGroup;
+			children = (
+				E854CE9D25B629D60066726F /* Utilities */,
+			);
+			path = CoreAdditions;
+			sourceTree = "<group>";
+		};
+		E854CE9325B629750066726F /* Designs */ = {
+			isa = PBXGroup;
+			children = (
+				E854CE9425B629750066726F /* ShadowButton.swift */,
+				E854CE9525B629750066726F /* ShadowField.swift */,
+				E854CE9625B629750066726F /* BoringLabel.swift */,
+			);
+			path = Designs;
+			sourceTree = "<group>";
+		};
+		E854CE9D25B629D60066726F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E854CE9E25B629E00066726F /* NiblessView.swift */,
+				E854CEA225B629FA0066726F /* NiblessVC.swift */,
+				E854CEA525B62A180066726F /* UIExtensions.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		E854CEA925B62A390066726F /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				E854CE8825B628D50066726F /* Application */,
+				E854CE8925B628E60066726F /* Home */,
+				E854CE9025B629350066726F /* CoreAdditions */,
+				E854CE9325B629750066726F /* Designs */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		E854CEAA25B62A3C0066726F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E854CE7F25B628C40066726F /* Info.plist */,
+				E854CE7C25B628C40066726F /* LaunchScreen.storyboard */,
+				E854CE7A25B628C40066726F /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +221,6 @@
 			files = (
 				E854CE7E25B628C40066726F /* LaunchScreen.storyboard in Resources */,
 				E854CE7B25B628C40066726F /* Assets.xcassets in Resources */,
-				E854CE7925B628C30066726F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +231,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E854CE7625B628C30066726F /* ViewController.swift in Sources */,
+				E854CE9825B629750066726F /* ShadowField.swift in Sources */,
+				E854CE9925B629750066726F /* BoringLabel.swift in Sources */,
 				E854CE7225B628C30066726F /* AppDelegate.swift in Sources */,
+				E854CEA325B629FA0066726F /* NiblessVC.swift in Sources */,
+				E854CEA625B62A180066726F /* UIExtensions.swift in Sources */,
+				E854CE8E25B629190066726F /* Home_VC.swift in Sources */,
 				E854CE7425B628C30066726F /* SceneDelegate.swift in Sources */,
+				E854CE9F25B629E00066726F /* NiblessView.swift in Sources */,
+				E854CE9725B629750066726F /* ShadowButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E854CE7725B628C30066726F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E854CE7825B628C30066726F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E854CE7C25B628C40066726F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -288,7 +380,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R8SJ24LQF3;
-				INFOPLIST_FILE = Function_Practice/Info.plist;
+				INFOPLIST_FILE = Function_Practice/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +399,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R8SJ24LQF3;
-				INFOPLIST_FILE = Function_Practice/Info.plist;
+				INFOPLIST_FILE = Function_Practice/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
