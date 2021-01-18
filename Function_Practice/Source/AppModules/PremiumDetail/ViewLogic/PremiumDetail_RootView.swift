@@ -1,5 +1,5 @@
 //
-//  Home_RootView.swift
+//  PremiumDetail_RootView.swift
 //  Function_Practice
 //
 //  Created by Nikolai Nobadi on 1/18/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Home_RootView: NiblessView {
+class PremiumDetail_RootView: NiblessView {
     
     // MARK: - RESPONDER
     
@@ -50,8 +50,9 @@ class Home_RootView: NiblessView {
     }
 }
 
-extension Home_RootView: Home_Interface{
+extension PremiumDetail_VC: PremiumDetail_UIResponder {
     
-    // MARK: - Interface
+    // MARK: - UIResponder
     
 }
+
