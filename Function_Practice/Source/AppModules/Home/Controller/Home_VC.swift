@@ -41,9 +41,12 @@ class Home_VC: NiblessVC {
     }
 }
 
+
+// MARK: - UIResponder
 extension Home_VC: Home_UIResponder {
     
-    // MARK: - UIResponder
+    
+    // MARK: - Show Premium
     func showPremiumDetail(_ premium: Premium?) {
         let premium = premium ?? Premium.empty
         let vc = makePremiumDetail_VC(premium)
@@ -60,11 +63,10 @@ extension Home_VC: Home_UIResponder {
         
         return vc
     }
-}
-
-extension Home_VC: Home_SubResponder {
     
-    func addPremium(_ premium: Premium) {
+    
+    // MARK: - Calculate
+    func calculate() {
         
     }
 }
