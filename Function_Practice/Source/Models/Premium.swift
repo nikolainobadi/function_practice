@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Premium {
+struct Premium: Hashable {
     let id: String = UUID().uuidString
     var name: String
     var rate: Float

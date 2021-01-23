@@ -11,7 +11,7 @@ class Home_RootView: NiblessView {
     
     // MARK: - RESPONDER
     weak var responder: Home_UIResponder?
-    
+    var dataSource: DataSource!
     
     // MARK: - PROPERTIES
     let targetText = "Target Monthly Pay:"
@@ -27,6 +27,16 @@ class Home_RootView: NiblessView {
         TitleFieldView(hourlyText)
     }()
     
+    lazy var premiumTableView: UITableView = {
+        let table = UITableView()
+        
+        dataSource = PremiumDataSource(table)
+        
+        table.dataSource = dataSource
+        table.register(UITableViewCell.self, forCellReuseIdentifier: "CellID")
+        
+        return table
+    }()
    
     
     let calculateButton: ShadowButton = {
@@ -65,6 +75,7 @@ class Home_RootView: NiblessView {
         addSubview(targetAmountView)
         addSubview(hourlyRateView)
         addSubview(calculateButton)
+        addSubview(premiumTableView)
     }
     
     func setupConstraints() {
@@ -76,6 +87,8 @@ class Home_RootView: NiblessView {
         
         calculateButton.anchor(bottom: safeAreaLayoutGuide.bottomAnchor, bottomConstant: 10, widthConstant: 200, heightConstant: 50)
         calculateButton.anchorCenterXToSuperview()
+        
+        premiumTableView.anchor(hourlyRateView.bottomAnchor, left: leftAnchor, bottom: calculateButton.topAnchor, right: rightAnchor)
     }
     
     
@@ -87,5 +100,6 @@ class Home_RootView: NiblessView {
     
     @objc
     func didTapCalculateButton() {
+        responder?.calculate()
     }
 }

@@ -16,3 +16,9 @@ protocol Home_UIResponder: AnyObject {
 protocol Home_SubResponder: AnyObject {
     func addPremium(_ premium: Premium)
 }
+
+
+// MARK: - Actions
+protocol Home_Actions {
+    func calculate()
+}

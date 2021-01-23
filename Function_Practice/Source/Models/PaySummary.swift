@@ -6,7 +6,7 @@
 //
 
 struct PaySummary {
+    var targetAmount: Float = 0
     var hourlyRate: Float = 0
-    var premiums: [Premium] = []
     var bonusDollars: Float = 0
 }
