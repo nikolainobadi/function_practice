@@ -5,6 +5,14 @@
 //  Created by Nikolai Nobadi on 1/18/21.
 //
 
+import UIKit
+
+// MARK: - Interface
+protocol Home_Interface: UIView {
+    func updatePremiumList(_ list: [Premium])
+}
+
+
 // MARK: UIResponder
 protocol Home_UIResponder: AnyObject {
     func showPremiumDetail(_ premium: Premium?)
@@ -14,7 +22,7 @@ protocol Home_UIResponder: AnyObject {
 
 // MARK: - SubResponder
 protocol Home_SubResponder: AnyObject {
-    func addPremium(_ premium: Premium)
+    func updatePremiums(_ premium: [Premium])
 }
 
 

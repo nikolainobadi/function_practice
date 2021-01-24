@@ -7,10 +7,16 @@
 
 import UIKit
 
-typealias DataSource = UITableViewDiffableDataSource<String, Premium>
+typealias DataSource = UITableViewDiffableDataSource<Section, Premium>
+typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Premium>
 
-class PremiumDataSource: UITableViewDiffableDataSource<String, Premium> {
+enum Section {
+    case main
+}
+
+class PremiumDataSource: UITableViewDiffableDataSource<Section, Premium> {
     
+    // MARK: - INIT
     init(_ table: UITableView) {
         super.init(tableView: table) { (table, indexPath, premium) -> UITableViewCell? in
             
@@ -22,5 +28,16 @@ class PremiumDataSource: UITableViewDiffableDataSource<String, Premium> {
             
             return cell
         }
+    }
+}
+
+extension PremiumDataSource {
+    
+    // MARK: - Update
+    func updateList(_ list: [Premium]) {
+        var snapshot = Snapshot()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(list)
+        apply(snapshot)
     }
 }

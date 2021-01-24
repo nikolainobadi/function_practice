@@ -15,11 +15,11 @@ class HomeSubscriber {
     
     
     // MARK: - SUBSCRIPTIONS
-    func subscribe_addPremium(_ publisher: Published<Premium>.Publisher) {
+    func subscribe_addPremium(_ publisher: Published<[Premium]>.Publisher) {
         
         publisher
-            .sink { [weak self] premium in
-                self?.responder?.addPremium(premium)
+            .sink { [weak self] premiums in
+                self?.responder?.updatePremiums(premiums)
             }
             .store(in: &subscriptions)
     }

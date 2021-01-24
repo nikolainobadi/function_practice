@@ -70,3 +70,12 @@ extension Home_VC: Home_UIResponder {
         
     }
 }
+
+
+// MARK: - SubResponder
+extension Home_VC: Home_SubResponder {
+    
+    func updatePremiums(_ premium: [Premium]) {
+        
+    }
+}

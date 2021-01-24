@@ -103,3 +103,12 @@ class Home_RootView: NiblessView {
         responder?.calculate()
     }
 }
+
+
+// MARK: - Interface
+extension Home_RootView: Home_Interface {
+    
+    func updatePremiumList(_ list: [Premium]) {
+        
+    }
+}
