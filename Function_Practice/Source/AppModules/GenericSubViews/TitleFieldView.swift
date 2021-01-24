@@ -19,11 +19,11 @@ class TitleFieldView: TitleView {
     }()
     
     // MARK: - INITIALIZATION
-    init(_ detail: String, keyboardType: UIKeyboardType = .decimalPad) {
+    init(_ detail: String, keyboardType: UIKeyboardType = .decimalPad, rightConstant: CGFloat = 50) {
         super.init(detail)
         
         addSubviews()
-        setupConstraints()
+        setupConstraints(rightConstant: rightConstant)
         
         textField.keyboardType = keyboardType
     }
@@ -41,10 +41,10 @@ class TitleFieldView: TitleView {
         addSubview(textField)
     }
     
-    override func setupConstraints() {
+    func setupConstraints(rightConstant: CGFloat) {
         super.setupConstraints()
         
-        textField.anchor(left: centerXAnchor, right: rightAnchor, leftConstant: 10, rightConstant: 50)
+        textField.anchor(left: centerXAnchor, right: rightAnchor, leftConstant: 10, rightConstant: rightConstant)
         textField.anchorCenterYToSuperview()
     }
 }

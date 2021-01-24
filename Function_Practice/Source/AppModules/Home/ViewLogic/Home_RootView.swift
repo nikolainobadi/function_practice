@@ -19,12 +19,21 @@ class Home_RootView: NiblessView {
     
     
     // MARK: - VIEWS
+    let titleLabel: BoringLabel = {
+        let label = BoringLabel(50, autoSize: true)
+        
+        label.text = "What's my pay?"
+        label.textAlignment = .center
+        
+        return label
+    }()
+    
     lazy var targetAmountView: TitleFieldView = {
-        TitleFieldView(targetText)
+        return TitleFieldView(targetText)
     }()
     
     lazy var hourlyRateView: TitleFieldView = {
-        TitleFieldView(hourlyText)
+        return TitleFieldView(hourlyText)
     }()
     
     lazy var premiumTableView: UITableView = {
@@ -61,6 +70,7 @@ class Home_RootView: NiblessView {
         setupConstraints()
         
         backgroundColor = .white
+        
     }
     
     override func updateConstraints() {
@@ -71,6 +81,7 @@ class Home_RootView: NiblessView {
     
     // MARK: - DISPLAYS SETUP
     func addSubviews() {
+        addSubview(titleLabel)
         addSubview(targetAmountView)
         addSubview(hourlyRateView)
         addSubview(calculateButton)
@@ -78,7 +89,9 @@ class Home_RootView: NiblessView {
     }
     
     func setupConstraints() {
-        targetAmountView.anchor(safeAreaLayoutGuide.topAnchor, left: leftAnchor, right: rightAnchor, topConstant: 20, leftConstant: 5, rightConstant: 5, heightConstant: 50)
+        titleLabel.anchor(safeAreaLayoutGuide.topAnchor, left: leftAnchor, right: rightAnchor, topConstant: 10, leftConstant: 10, rightConstant: 10)
+        
+        targetAmountView.anchor(titleLabel.bottomAnchor, left: leftAnchor, right: rightAnchor, topConstant: 20, leftConstant: 5, rightConstant: 5, heightConstant: 50)
         targetAmountView.anchorCenterXToSuperview()
         
         hourlyRateView.anchor(targetAmountView.bottomAnchor, left: leftAnchor, right: rightAnchor, topConstant: 10, leftConstant: 5, rightConstant: 5, heightConstant: 50)
@@ -87,7 +100,7 @@ class Home_RootView: NiblessView {
         calculateButton.anchor(bottom: safeAreaLayoutGuide.bottomAnchor, bottomConstant: 10, widthConstant: 200, heightConstant: 50)
         calculateButton.anchorCenterXToSuperview()
         
-        premiumTableView.anchor(centerYAnchor, left: leftAnchor, bottom: calculateButton.topAnchor, right: rightAnchor, topConstant: -200)
+        premiumTableView.anchor(centerYAnchor, left: leftAnchor, bottom: calculateButton.topAnchor, right: rightAnchor, topConstant: -150)
     }
     
     

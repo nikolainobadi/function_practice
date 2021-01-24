@@ -14,22 +14,31 @@ class PremiumDetail_RootView: NiblessView {
     
     
     // MARK: - VIEWS
-    let nameField: ShadowField = {
-        let field = ShadowField()
-        return field
+    let titleLabel: BoringLabel = {
+        let label = BoringLabel(50)
+        
+        label.text = "Premium!!!"
+        label.textAlignment = .center
+        
+        return label
     }()
     
-    let rateField: ShadowField = {
-        let field = ShadowField()
-        return field
+    let nameView: TitleFieldView = {
+        let view = TitleFieldView("Premium Name", keyboardType: .default, rightConstant: 10)
+        
+        view.textField.placeholder = "Enter name..."
+        view.textField.textAlignment = .center
+        
+        return view
     }()
     
+    let rateView: TitleFieldView = {
+        let view = TitleFieldView("Premium Rate")
+        return view
+    }()
     
-    
-    lazy var oneTimeToggle: UISwitch = {
-        let toggle = UISwitch()
-        toggle.addTarget(self, action: #selector(didChangeOneTimeToggle), for: .valueChanged)
-        return toggle
+    let toggleView: ToggleView = {
+        return ToggleView("One Time Toggle")
     }()
     
     lazy var addPremiumButton: UIBarButtonItem = {
@@ -64,16 +73,19 @@ class PremiumDetail_RootView: NiblessView {
     
     // MARK: - DISPLAYS SETUP
     func addSubviews() {
-        addSubview(nameField)
-        addSubview(rateField)
-        addSubview(oneTimeToggle)
+        addSubview(titleLabel)
+        addSubview(nameView)
+        addSubview(rateView)
+        addSubview(toggleView)
         addSubview(saveButton)
     }
     
     func setupConstraints() {
-        nameField.anchor(safeAreaLayoutGuide.topAnchor, left: leftAnchor, right: rightAnchor, topConstant: 50, leftConstant: 30, rightConstant: 30)
+        titleLabel.anchor(safeAreaLayoutGuide.topAnchor, left: leftAnchor, right: rightAnchor, topConstant: 70, leftConstant: 10, rightConstant: 10)
         
-        rateField.anchor(nameField.bottomAnchor, left: leftAnchor, right: rightAnchor, topConstant: 50, leftConstant: 30, rightConstant: 30)
+        nameView.anchor(left: leftAnchor, bottom: centerYAnchor, right: rightAnchor, leftConstant: 30, bottomConstant: 20, rightConstant: 30, heightConstant: 50)
+        
+        rateView.anchor(centerYAnchor, left: leftAnchor, right: rightAnchor, topConstant: 50, leftConstant: 30, rightConstant: 30, heightConstant: 50)
     }
     
     
