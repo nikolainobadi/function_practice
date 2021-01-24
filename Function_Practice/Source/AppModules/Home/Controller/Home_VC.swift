@@ -57,9 +57,13 @@ extension Home_VC: Home_UIResponder {
         
         let rootView = PremiumDetail_RootView()
         let manager = PremiumDetail_Manager(premium)
-        let vc = PremiumDetail_VC(rootView: rootView, manager: manager)
+        let subscriber = PremiumDetail_Subscriber()
+        let vc = PremiumDetail_VC(rootView: rootView, manager: manager, subscriber: subscriber)
         
         rootView.responder = manager
+        subscriber.responder = manager
+        subscriber.subscribe_premiumName(rootView.nameView.textField)
+        subscriber.subscribe_premiumRate(rootView.rateView.textField)
         
         return vc
     }
@@ -67,7 +71,6 @@ extension Home_VC: Home_UIResponder {
     
     // MARK: - Calculate
     func calculate() {
-        
     }
 }
 
@@ -75,7 +78,7 @@ extension Home_VC: Home_UIResponder {
 // MARK: - SubResponder
 extension Home_VC: Home_SubResponder {
     
-    func updatePremiums(_ premium: [Premium]) {
-        
+    func updatePremiums(_ list: [Premium]) {
+        rootView.updatePremiumList(list)
     }
 }

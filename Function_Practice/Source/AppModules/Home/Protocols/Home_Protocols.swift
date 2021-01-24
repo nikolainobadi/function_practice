@@ -22,7 +22,7 @@ protocol Home_UIResponder: AnyObject {
 
 // MARK: - SubResponder
 protocol Home_SubResponder: AnyObject {
-    func updatePremiums(_ premium: [Premium])
+    func updatePremiums(_ list: [Premium])
 }
 
 

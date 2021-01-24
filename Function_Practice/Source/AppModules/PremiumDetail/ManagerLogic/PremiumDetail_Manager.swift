@@ -20,6 +20,8 @@ class PremiumDetail_Manager {
     }
 }
 
+
+// MARK: - UIResponder
 extension PremiumDetail_Manager: PremiumDetail_UIResponder {
     
     // MARK: - UIResponder
@@ -28,6 +30,21 @@ extension PremiumDetail_Manager: PremiumDetail_UIResponder {
     }
     
     func addPremium() {
+        guard premium.name != "" else { return }
+        guard premium.rate != 0 else { return }
+        
         premiumPublisher.send(premium)
+    }
+}
+
+// MARK: - SubResponder
+extension PremiumDetail_Manager: PremiumDetail_SubResponder {
+    
+    func updateName(_ name: String) {
+        premium.name = name
+    }
+    
+    func updateRate(_ rate: Float) {
+        premium.rate = rate
     }
 }
