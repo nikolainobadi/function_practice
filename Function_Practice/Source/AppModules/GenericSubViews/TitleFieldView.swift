@@ -19,7 +19,7 @@ class TitleFieldView: TitleView {
     }()
     
     // MARK: - INITIALIZATION
-    init(_ detail: String, keyboardType: UIKeyboardType) {
+    init(_ detail: String, keyboardType: UIKeyboardType = .decimalPad) {
         super.init(detail)
         
         addSubviews()
@@ -36,10 +36,14 @@ class TitleFieldView: TitleView {
     
     // MARK: - DISPLAYS SETUP
     override func addSubviews() {
+        super.addSubviews()
+        
         addSubview(textField)
     }
     
     override func setupConstraints() {
+        super.setupConstraints()
+        
         textField.anchor(left: centerXAnchor, right: rightAnchor, leftConstant: 10, rightConstant: 50)
         textField.anchorCenterYToSuperview()
     }
