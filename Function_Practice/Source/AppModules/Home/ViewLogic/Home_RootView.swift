@@ -38,7 +38,6 @@ class Home_RootView: NiblessView {
         return table
     }()
    
-    
     let calculateButton: ShadowButton = {
         let button = ShadowButton()
         
@@ -88,7 +87,7 @@ class Home_RootView: NiblessView {
         calculateButton.anchor(bottom: safeAreaLayoutGuide.bottomAnchor, bottomConstant: 10, widthConstant: 200, heightConstant: 50)
         calculateButton.anchorCenterXToSuperview()
         
-        premiumTableView.anchor(hourlyRateView.bottomAnchor, left: leftAnchor, bottom: calculateButton.topAnchor, right: rightAnchor)
+        premiumTableView.anchor(centerYAnchor, left: leftAnchor, bottom: calculateButton.topAnchor, right: rightAnchor, topConstant: -200)
     }
     
     
