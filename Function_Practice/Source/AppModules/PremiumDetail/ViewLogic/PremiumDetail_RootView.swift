@@ -91,7 +91,7 @@ class PremiumDetail_RootView: NiblessView {
     @objc
     func didTapSaveButton(_ sender: UIButton) {
         sender.pulse()
-        
+        responder?.addPremium()
     }
 }
 

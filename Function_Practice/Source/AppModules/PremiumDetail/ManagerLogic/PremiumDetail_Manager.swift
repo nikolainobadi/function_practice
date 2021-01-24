@@ -27,7 +27,7 @@ extension PremiumDetail_Manager: PremiumDetail_UIResponder {
         premium.oneTime.toggle()
     }
     
-    func addPremiumToSummary() {
+    func addPremium() {
         premiumPublisher.send(premium)
     }
 }
