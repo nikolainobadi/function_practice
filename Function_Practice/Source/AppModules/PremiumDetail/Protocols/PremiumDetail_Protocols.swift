@@ -9,3 +9,8 @@ protocol PremiumDetail_UIResponder: AnyObject {
     func toggleOneTime()
     func addPremium()
 }
+
+protocol PremiumDetail_SubResponder: AnyObject {
+    func updateName(_ name: String)
+    func updateRate(_ rate: Float)
+}
