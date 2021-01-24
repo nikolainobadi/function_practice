@@ -1,11 +1,11 @@
 //
-//  TitleFieldView.swift
+//  TitleView.swift
 //  Function_Practice
 //
-//  Created by Nikolai Nobadi on 1/22/21.
+//  Created by Nikolai Nobadi on 1/23/21.
 //
 
-class TitleFieldView: NiblessView {
+class TitleView: NiblessView {
     
     // MARK: - VIEWS
     let detailLabel: BoringLabel = {
@@ -16,14 +16,6 @@ class TitleFieldView: NiblessView {
         return label
     }()
     
-    let textField: ShadowField = {
-        let field = ShadowField()
-        
-        field.placeholder = "$0"
-        field.keyboardType = .decimalPad
-        
-        return field
-    }()
     
     // MARK: - INITIALIZATION
     init(_ detail: String) {
@@ -44,14 +36,11 @@ class TitleFieldView: NiblessView {
     // MARK: - DISPLAYS SETUP
     func addSubviews() {
         addSubview(detailLabel)
-        addSubview(textField)
     }
     
     func setupConstraints() {
         detailLabel.anchor(left: leftAnchor, right: centerXAnchor, rightConstant: 10)
         detailLabel.anchorCenterYToSuperview()
-        
-        textField.anchor(left: centerXAnchor, right: rightAnchor, leftConstant: 10, rightConstant: 50)
-        textField.anchorCenterYToSuperview()
     }
 }
+

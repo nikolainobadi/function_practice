@@ -24,6 +24,8 @@ class PremiumDetail_RootView: NiblessView {
         return field
     }()
     
+    
+    
     lazy var oneTimeToggle: UISwitch = {
         let toggle = UISwitch()
         toggle.addTarget(self, action: #selector(didChangeOneTimeToggle), for: .valueChanged)
@@ -69,7 +71,9 @@ class PremiumDetail_RootView: NiblessView {
     }
     
     func setupConstraints() {
+        nameField.anchor(safeAreaLayoutGuide.topAnchor, left: leftAnchor, right: rightAnchor, topConstant: 50, leftConstant: 30, rightConstant: 30)
         
+        rateField.anchor(nameField.bottomAnchor, left: leftAnchor, right: rightAnchor, topConstant: 50, leftConstant: 30, rightConstant: 30)
     }
     
     
