@@ -78,10 +78,10 @@ class Home_RootView: NiblessView {
     }
     
     func setupConstraints() {
-        targetAmountView.anchor(safeAreaLayoutGuide.topAnchor, left: leftAnchor, right: rightAnchor, topConstant: 50, leftConstant: 5, rightConstant: 5)
+        targetAmountView.anchor(safeAreaLayoutGuide.topAnchor, left: leftAnchor, right: rightAnchor, topConstant: 20, leftConstant: 5, rightConstant: 5, heightConstant: 50)
         targetAmountView.anchorCenterXToSuperview()
         
-        hourlyRateView.anchor(targetAmountView.bottomAnchor, left: leftAnchor, right: rightAnchor, topConstant: 50, leftConstant: 5, rightConstant: 5)
+        hourlyRateView.anchor(targetAmountView.bottomAnchor, left: leftAnchor, right: rightAnchor, topConstant: 10, leftConstant: 5, rightConstant: 5, heightConstant: 50)
         hourlyRateView.anchorCenterXToSuperview()
         
         calculateButton.anchor(bottom: safeAreaLayoutGuide.bottomAnchor, bottomConstant: 10, widthConstant: 200, heightConstant: 50)
