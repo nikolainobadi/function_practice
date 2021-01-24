@@ -26,6 +26,7 @@
 		E854CEA625B62A180066726F /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854CEA525B62A180066726F /* UIExtensions.swift */; };
 		E856CCF225BE0A4000033837 /* PremiumDetail_Subscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = E856CCF125BE0A4000033837 /* PremiumDetail_Subscriber.swift */; };
 		E856CCF925BE0B4300033837 /* BaseSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = E856CCF825BE0B4300033837 /* BaseSubscriber.swift */; };
+		E856CD0025BE0E2E00033837 /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E856CCFF25BE0E2E00033837 /* AlertHandler.swift */; };
 		E86E6F2525BE04B700A97A84 /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86E6F2425BE04B700A97A84 /* ToggleView.swift */; };
 		E88D4D9C25BBCB7800F82EE0 /* TitleFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88D4D9B25BBCB7800F82EE0 /* TitleFieldView.swift */; };
 		E88D4DA325BBD19100F82EE0 /* PremiumDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88D4DA225BBD19100F82EE0 /* PremiumDataSource.swift */; };
@@ -58,6 +59,7 @@
 		E854CEA525B62A180066726F /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		E856CCF125BE0A4000033837 /* PremiumDetail_Subscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumDetail_Subscriber.swift; sourceTree = "<group>"; };
 		E856CCF825BE0B4300033837 /* BaseSubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSubscriber.swift; sourceTree = "<group>"; };
+		E856CCFF25BE0E2E00033837 /* AlertHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
 		E86E6F2425BE04B700A97A84 /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
 		E88D4D9B25BBCB7800F82EE0 /* TitleFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleFieldView.swift; sourceTree = "<group>"; };
 		E88D4DA225BBD19100F82EE0 /* PremiumDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumDataSource.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 		E854CE9025B629350066726F /* CoreAdditions */ = {
 			isa = PBXGroup;
 			children = (
+				E856CCFE25BE0E2300033837 /* Handlers */,
 				E854CE9D25B629D60066726F /* Utilities */,
 			);
 			path = CoreAdditions;
@@ -240,6 +243,14 @@
 				E856CCF825BE0B4300033837 /* BaseSubscriber.swift */,
 			);
 			path = Subscriber;
+			sourceTree = "<group>";
+		};
+		E856CCFE25BE0E2300033837 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				E856CCFF25BE0E2E00033837 /* AlertHandler.swift */,
+			);
+			path = Handlers;
 			sourceTree = "<group>";
 		};
 		E8FCF88825B62BBD00F3AACF /* AppModules */ = {
@@ -378,6 +389,7 @@
 				E8FCF89325B62C6C00F3AACF /* Home_RootView.swift in Sources */,
 				E854CE7225B628C30066726F /* AppDelegate.swift in Sources */,
 				E88D4D9C25BBCB7800F82EE0 /* TitleFieldView.swift in Sources */,
+				E856CD0025BE0E2E00033837 /* AlertHandler.swift in Sources */,
 				E854CEA325B629FA0066726F /* NiblessVC.swift in Sources */,
 				E854CEA625B62A180066726F /* UIExtensions.swift in Sources */,
 				E88D4DA325BBD19100F82EE0 /* PremiumDataSource.swift in Sources */,

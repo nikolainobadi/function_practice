@@ -7,6 +7,20 @@
 
 import UIKit
 
+// MARK: - UIAlert
+public extension UIAlertController {
+    
+    func show() {
+        if var topController = UIApplication.shared.keyWindow?.rootViewController {
+            while let presentedViewController = topController.presentedViewController {
+                topController = presentedViewController
+            }
+
+            topController.present(self, animated: true, completion: nil)
+        }
+    }
+}
+
 // MARK: - UIViewController
 extension UIViewController {
     
