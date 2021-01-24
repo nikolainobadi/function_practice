@@ -11,7 +11,7 @@ class Home_RootView: NiblessView {
     
     // MARK: - RESPONDER
     weak var responder: Home_UIResponder?
-    var dataSource: DataSource!
+    var dataSource: PremiumDataSource!
     
     // MARK: - PROPERTIES
     let targetText = "Target Monthly Pay:"
@@ -34,6 +34,10 @@ class Home_RootView: NiblessView {
     
     lazy var hourlyRateView: TitleFieldView = {
         return TitleFieldView(hourlyText)
+    }()
+    
+    lazy var bonusDollarsView: TitleFieldView = {
+        return TitleFieldView("Bonus So far")
     }()
     
     lazy var premiumTableView: UITableView = {
@@ -84,6 +88,7 @@ class Home_RootView: NiblessView {
         addSubview(titleLabel)
         addSubview(targetAmountView)
         addSubview(hourlyRateView)
+        addSubview(bonusDollarsView)
         addSubview(calculateButton)
         addSubview(premiumTableView)
     }
@@ -97,10 +102,13 @@ class Home_RootView: NiblessView {
         hourlyRateView.anchor(targetAmountView.bottomAnchor, left: leftAnchor, right: rightAnchor, topConstant: 10, leftConstant: 5, rightConstant: 5, heightConstant: 50)
         hourlyRateView.anchorCenterXToSuperview()
         
+        bonusDollarsView.anchor(hourlyRateView.bottomAnchor, left: leftAnchor, right: rightAnchor, topConstant: 10, leftConstant: 5, rightConstant: 5, heightConstant: 50)
+        bonusDollarsView.anchorCenterXToSuperview()
+        
         calculateButton.anchor(bottom: safeAreaLayoutGuide.bottomAnchor, bottomConstant: 10, widthConstant: 200, heightConstant: 50)
         calculateButton.anchorCenterXToSuperview()
         
-        premiumTableView.anchor(centerYAnchor, left: leftAnchor, bottom: calculateButton.topAnchor, right: rightAnchor, topConstant: -150)
+        premiumTableView.anchor(centerYAnchor, left: leftAnchor, bottom: calculateButton.topAnchor, right: rightAnchor)
     }
     
     
@@ -111,7 +119,8 @@ class Home_RootView: NiblessView {
     }
     
     @objc
-    func didTapCalculateButton() {
+    func didTapCalculateButton(_ sender: UIButton) {
+        sender.pulse()
         responder?.calculate()
     }
 }
@@ -121,6 +130,6 @@ class Home_RootView: NiblessView {
 extension Home_RootView: Home_Interface {
     
     func updatePremiumList(_ list: [Premium]) {
-        
+        dataSource.updateList(list)
     }
 }

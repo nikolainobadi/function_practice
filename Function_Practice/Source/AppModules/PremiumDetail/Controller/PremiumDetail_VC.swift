@@ -11,6 +11,7 @@ class PremiumDetail_VC: NiblessVC {
     let manager: PremiumDetail_Manager
     let subscriber: PremiumDetail_Subscriber
     
+    
     // MARK: - VIEWS
     let rootView: PremiumDetail_RootView
     

@@ -82,6 +82,8 @@ class PremiumDetail_RootView: NiblessView {
         
         rateView.anchor(centerYAnchor, left: leftAnchor, right: rightAnchor, topConstant: 50, leftConstant: 30, rightConstant: 30, heightConstant: 50)
         
+        toggleView.anchor(rateView.bottomAnchor, left: leftAnchor, right: rightAnchor, topConstant: 50, leftConstant: 30, rightConstant: 30, heightConstant: 50)
+        
         saveButton.anchor(bottom: safeAreaLayoutGuide.bottomAnchor, bottomConstant: 10, widthConstant: 200, heightConstant: 50)
         saveButton.anchorCenterXToSuperview()
     }

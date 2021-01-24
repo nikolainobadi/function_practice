@@ -8,17 +8,20 @@
 class Home_VC: NiblessVC {
     
     // MARK: - PROPERTIES
-    let manager: Home_Manager
+    let manager: Home_Actions
+    let subscriber: Home_Subscriber
+    
     
     // MARK: - VIEWS
     let rootView: Home_RootView
     
     
     // MARK: - INITIALIZATION
-    init(rootView: Home_RootView, manager: Home_Manager) {
+    init(rootView: Home_RootView, manager: Home_Actions, subscriber: Home_Subscriber) {
         
         self.rootView = rootView
         self.manager = manager
+        self.subscriber = subscriber
         super.init(hasTextFields: true)
     }
     
@@ -61,9 +64,13 @@ extension Home_VC: Home_UIResponder {
         let vc = PremiumDetail_VC(rootView: rootView, manager: manager, subscriber: subscriber)
         
         rootView.responder = manager
+        rootView.toggleView.responder = manager
+        
         subscriber.responder = manager
         subscriber.subscribe_premiumName(rootView.nameView.textField)
         subscriber.subscribe_premiumRate(rootView.rateView.textField)
+        
+        self.subscriber.subscribe_addPremium(manager.premiumPublisher)
         
         return vc
     }
@@ -71,6 +78,7 @@ extension Home_VC: Home_UIResponder {
     
     // MARK: - Calculate
     func calculate() {
+        manager.calculate()
     }
 }
 
@@ -80,5 +88,6 @@ extension Home_VC: Home_SubResponder {
     
     func updatePremiums(_ list: [Premium]) {
         rootView.updatePremiumList(list)
+        navigationController?.dismiss(animated: true, completion: nil)
     }
 }
