@@ -10,6 +10,7 @@ class PremiumDetail_VC: NiblessVC {
     // MARK: - PROPERTIES
     let manager: PremiumDetail_Manager
     
+    
     // MARK: - VIEWS
     let rootView: PremiumDetail_RootView
     

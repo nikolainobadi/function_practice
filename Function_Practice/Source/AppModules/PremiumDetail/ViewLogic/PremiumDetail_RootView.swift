@@ -41,11 +41,6 @@ class PremiumDetail_RootView: NiblessView {
         return ToggleView("One Time Toggle")
     }()
     
-    lazy var addPremiumButton: UIBarButtonItem = {
-        let button = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAddButton))
-        return button
-    }()
-    
     lazy var saveButton: ShadowButton = {
         let button = ShadowButton()
         
@@ -86,20 +81,13 @@ class PremiumDetail_RootView: NiblessView {
         nameView.anchor(left: leftAnchor, bottom: centerYAnchor, right: rightAnchor, leftConstant: 30, bottomConstant: 20, rightConstant: 30, heightConstant: 50)
         
         rateView.anchor(centerYAnchor, left: leftAnchor, right: rightAnchor, topConstant: 50, leftConstant: 30, rightConstant: 30, heightConstant: 50)
+        
+        saveButton.anchor(bottom: safeAreaLayoutGuide.bottomAnchor, bottomConstant: 10, widthConstant: 200, heightConstant: 50)
+        saveButton.anchorCenterXToSuperview()
     }
     
     
     // MARK: - ACTIONS
-    @objc
-    func didTapAddButton() {
-        
-    }
-    
-    @objc
-    func didChangeOneTimeToggle() {
-        
-    }
-    
     @objc
     func didTapSaveButton(_ sender: UIButton) {
         sender.pulse()
