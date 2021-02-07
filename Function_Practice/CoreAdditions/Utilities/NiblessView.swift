@@ -13,6 +13,8 @@ class NiblessView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        backgroundColor = .white
     }
     
     @available(*, unavailable, message: "Can't load from a nib, fool!")

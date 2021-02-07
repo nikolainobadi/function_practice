@@ -5,14 +5,24 @@
 //  Created by Nikolai Nobadi on 1/12/21.
 //
 
+//
+//  BoringLabel.swift
+//  iCleanMe2
+//
+//  Created by Nikolai Rivas on 10/9/19.
+//  Copyright © 2019 Nikolai Nobadi. All rights reserved.
+//
+
 import UIKit
 
 class BoringLabel: UILabel {
     
-    init(_ fontSize: CGFloat, autoSize: Bool = false) {
+    init(_ fontSize: CGFloat, autoSize: Bool = false, thickFont: Bool = false, thonburiFont: Bool = false) {
         super.init(frame: .zero)
         
-        self.font = UIFont(name: "MarkerFelt-Thin", size: fontSize)
+        let fontName = thonburiFont ? "Thonburi" : thickFont ? "MarkerFelt-Wide" : "MarkerFelt-Thin"
+        
+        self.font = UIFont(name: fontName, size: fontSize)
         self.textColor = .label
         
         if autoSize {
@@ -25,3 +35,4 @@ class BoringLabel: UILabel {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
