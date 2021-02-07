@@ -14,8 +14,9 @@ class Login_VC: NiblessVC {
     
     // MARK: - VIEWS
     let titleLabel: BoringLabel = {
-        let label = BoringLabel(55, autoSize: true, withShadow: true)
+        let label = BoringLabel(55, autoSize: true)
         
+        label.text = "Login"
         label.textAlignment = .center
         
         return label
@@ -62,6 +63,7 @@ class Login_VC: NiblessVC {
     let loginButton: ShadowButton = {
         let button = ShadowButton()
         
+        button.setTitle("Login", for: .normal)
         button.addTarget(self, action: #selector(didTapLoginButton(_:)), for: .touchUpInside)
         
         return button
@@ -89,6 +91,8 @@ class Login_VC: NiblessVC {
         
         addSubviews()
         setupConstraints()
+        
+        view.backgroundColor = .systemPurple
     }
     
     

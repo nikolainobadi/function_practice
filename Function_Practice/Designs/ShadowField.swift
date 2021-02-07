@@ -70,6 +70,7 @@ extension ShadowField {
         layer.shadowRadius = 2
         layer.masksToBounds = false
         layer.shadowOpacity = 1.0
+        layer.backgroundColor = UIColor.systemBackground.cgColor
         
         if withErrorLabel {
             addErrorLabel()

@@ -17,7 +17,7 @@ import UIKit
 
 class BoringLabel: UILabel {
     
-    init(_ fontSize: CGFloat, autoSize: Bool = false, thickFont: Bool = false, thonburiFont: Bool = false, withShadow: Bool = false) {
+    init(_ fontSize: CGFloat, autoSize: Bool = false, thickFont: Bool = false, thonburiFont: Bool = false) {
         super.init(frame: .zero)
         
         let fontName = thonburiFont ? "Thonburi" : thickFont ? "MarkerFelt-Wide" : "MarkerFelt-Thin"
@@ -28,12 +28,6 @@ class BoringLabel: UILabel {
         if autoSize {
             self.adjustsFontSizeToFitWidth = true
             self.minimumScaleFactor = 0.2
-        }
-        
-        if withShadow {
-            textColor = .systemBlue
-            shadowColor = .label
-            shadowOffset = CGSize(width: 0.5, height: 1)
         }
     }
     
