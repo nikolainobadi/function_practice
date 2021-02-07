@@ -9,9 +9,9 @@ import Foundation
 
 struct Premium: Hashable {
     let id: String = UUID().uuidString
-    var name: String
-    var rate: Float
-    var oneTime: Bool
+    var name: String // spanish
+    var rate: Float // .50
+    var oneTime: Bool // false
 }
 
 extension Premium {
@@ -20,3 +20,12 @@ extension Premium {
         return Premium(name: "", rate: 0, oneTime: false)
     }
 }
+
+
+
+
+
+
+
+
+

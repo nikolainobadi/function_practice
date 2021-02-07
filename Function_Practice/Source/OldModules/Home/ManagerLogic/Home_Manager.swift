@@ -12,6 +12,8 @@ class Home_Manager {
     // MARK: - PROPERTIES
     var summary = PaySummary()
     @Published var premiums = [Premium]()
+    
+    let monthlyHours = 160
 }
 
 
@@ -19,9 +21,12 @@ class Home_Manager {
 extension Home_Manager: Home_Actions {
     
     func calculate() {
-
+        
     }
 }
+
+
+
 
 
 // MARK: - SummaryResponder
