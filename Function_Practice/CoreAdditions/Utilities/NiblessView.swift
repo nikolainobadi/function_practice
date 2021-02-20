@@ -11,15 +11,29 @@ import UIKit
 
 class NiblessView: UIView {
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    // MARK: - INIT
+    init(backgroundColor: UIColor? = .white) {
+        super.init(frame: .zero)
         
-        backgroundColor = .white
+        addSubviews()
+        setupConstraints()
+        self.backgroundColor = backgroundColor
     }
     
     @available(*, unavailable, message: "Can't load from a nib, fool!")
     required init?(coder: NSCoder) {
         fatalError("Can't load from a nib, fool!")
     }
+    
+    override func updateConstraints() {
+        setupConstraints()
+        super.updateConstraints()
+    }
+    
+    
+    // MARK: - Display Setup
+    func addSubviews() {}
+    
+    func setupConstraints() {}
 }
 

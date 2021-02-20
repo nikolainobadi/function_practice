@@ -8,6 +8,11 @@
 import UIKit
 
 
+// REMEMBER!!!
+// comments like this are ignored by Xcode
+
+
+
 // MARK: - Protocol Template
 protocol NamedObject {
     
@@ -24,12 +29,12 @@ protocol NamedObject {
 class Guide: NamedObject {
 
     
-    // MARK: Required by NamedObject
+    //  Required by NamedObject
     let cannotChange_id = 12345
     var canChange_Name = "This variable is required cuz of protocol NamedObject"
     
     
-    // MARK: Other Properties
+    //  Other Properties
     let cannotChange_numberWithDecimal: Float = 1.25
     
     var canChange_trueOrFalse: Bool = true
@@ -39,13 +44,13 @@ class Guide: NamedObject {
 extension Guide {
     
     
-    // MARK: Basic Function
+    // Basic Function
     func sayHello() {
         print("Hello")
     }
 
     
-    // MARK: One Argument/Parameter
+    // MARK: One Arg/Parameter
     func sayHelloTo(name: String) {
         print("Hello,", name)
        
