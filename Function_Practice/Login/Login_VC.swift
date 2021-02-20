@@ -9,6 +9,10 @@ import UIKit
 
 class Login_VC: NiblessVC {
     
+    var canLogin = true
+    
+    var isSignUp: Bool { titleLabel.text == "Sign Up" }
+    
     // MARK: - VIEWS
     let titleLabel: BoringLabel = {
         let label = BoringLabel(55, autoSize: true)
@@ -130,55 +134,92 @@ class Login_VC: NiblessVC {
     }
     
     
+    // MARK: - HELPER METHODS
+    func validateUsername() {
+        if let username = getText(for: usernameField) {
+            if username.count < 4 {
+                canLogin = false
+                usernameField.setErrorMessage("Short username")
+            }
+        } else {
+            canLogin = false
+        }
+    }
+    
+    func validateEmail() {
+        if let email = getText(for: emailField) {
+            if !email.contains("@") {
+                canLogin = false
+                emailField.setErrorMessage("invalid email")
+            }
+        } else {
+            canLogin = false
+        }
+    }
+    
+    func validatePassword() {
+        if let password = getText(for: passwordField) {
+            if password.count < 6 {
+                canLogin = false
+                passwordField.setErrorMessage("Passwords too short")
+            }
+        } else {
+            canLogin = false
+        }
+    }
+    
+    func validateConfirm() {
+        if let confirm = getText(for: confirmField) {
+            guard let password = getText(for: passwordField) else { return }
+            
+            if confirm != password {
+                canLogin = false
+                confirmField.setErrorMessage("Passwords don't match")
+            }
+        } else {
+            canLogin = false
+        }
+    }
+    
+    func getText(for field: ShadowField) -> String? {
+        guard let text = field.text else { return nil }
+        guard text != "" else { return nil }
+        return text
+    }
+    
+    func resetErrorLabels() {
+        canLogin = true
+        usernameField.setErrorMessage("")
+        emailField.setErrorMessage("")
+        passwordField.setErrorMessage("")
+        confirmField.setErrorMessage("")
+    }
+    
+    func validateInfo() {
+        validateEmail()
+        validatePassword()
+        
+        if isSignUp {
+            validateUsername()
+            validateConfirm()
+        }
+    }
+    
+    func showLoginAlert() {
+        guard canLogin else { return }
+        let action = isSignUp ? "signing up" : "logging in"
+        Alert.showAlert(title: "Yay", message: "We're \(action)")
+    }
+    
+    
     // MARK: - ACTIONS
     @objc
     func didTapLoginButton(_ sender: UIButton) {
         sender.pulse()
         
-        let isSignUp = titleLabel.text == "Sign Up"
-        
-        usernameField.setErrorMessage("")
-        emailField.setErrorMessage("")
-        passwordField.setErrorMessage("")
-        confirmField.setErrorMessage("")
-        
-        guard let username = usernameField.text else { return }
-        guard let email = emailField.text else { return }
-        guard let password = passwordField.text else { return }
-        guard let confirm = confirmField.text else { return }
-        
-        if isSignUp {
-            guard username != "" else { return }
-            
-            guard username.count >= 4 else {
-                usernameField.setErrorMessage("Username too short")
-                return
-            }
-            
-        }
-        
-        guard email != "" else { return }
-        guard email.contains("@") && email.contains(".com") else {
-            emailField.setErrorMessage("Invalid Email")
-            return
-        }
-        
-        guard password != "" else { return }
-        guard password.count >= 6 else {
-            passwordField.setErrorMessage("Password too short")
-            return
-        }
-        
-        if isSignUp {
-            guard confirm == password else {
-                confirmField.setErrorMessage("Passwords don't match")
-                return
-            }
-        }
-        
-        
-        let action = isSignUp ? "signing up" : "logging in"
-        Alert.showAlert(title: "Yay", message: "We're \(action)")
+        resetErrorLabels()
+        validateInfo()
+        showLoginAlert()
     }
     
     @objc
