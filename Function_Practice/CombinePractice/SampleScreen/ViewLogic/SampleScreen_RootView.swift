@@ -52,6 +52,44 @@ class SampleScreen_RootView: NiblessView {
     @objc
     func didTapLoginButton(_ sender: UIButton) {
         sender.pulse()
-        responder?.tryLogin()
+        responder?.login()
+    }
+}
+
+
+// MARK: - Interface
+extension SampleScreen_RootView: SampleScreen_Interface {
+    
+    func updateView(with state: SampleScreen_State) {
+        updateNameField(state.nameError)
+        updateLoginButton(state.canLogin)
+    }
+}
+
+
+// MARK: - HELPER METHODS
+extension SampleScreen_RootView {
+    
+    func updateNameField(_ nameError: String?) {
+        let error = nameError ?? ""
+        nameField.setErrorMessage(error)
+    }
+    
+    func updateLoginButton(_ canLogin: Bool) {
+        if canLogin {
+            enableButton(loginButton)
+        } else {
+            disableButton(loginButton)
+        }
+    }
+    
+    func enableButton(_ button: ShadowButton) {
+        button.alpha = 1
+        button.isEnabled = true
+    }
+    
+    func disableButton(_ button: ShadowButton) {
+        button.alpha = 0.5
+        button.isEnabled = false
     }
 }

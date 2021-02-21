@@ -8,7 +8,8 @@
 class SampleScreen_VC: NiblessVC {
     
     // MARK: - PROPERTIES
-    let manager: SampleScreen_Manager
+    let manager: SampleScreen_Actions
+    let subscriber: SampleScreen_Subscriber
     
     
     // MARK: - VIEWS
@@ -16,10 +17,11 @@ class SampleScreen_VC: NiblessVC {
     
     
     // MARK: - INITIALIZATION
-    init(rootView: SampleScreen_Interface, manager: SampleScreen_Manager) {
+    init(rootView: SampleScreen_Interface, manager: SampleScreen_Actions, subscriber: SampleScreen_Subscriber) {
         
         self.rootView = rootView
         self.manager = manager
+        self.subscriber = subscriber
         super.init(hasTextFields: true)
     }
     
@@ -27,5 +29,18 @@ class SampleScreen_VC: NiblessVC {
     // MARK: - LIFE CYCLE
     override func loadView() {
         view = rootView
+    }
+}
+
+
+// MARK: - SubResponder
+extension SampleScreen_VC: SampleScreen_SubResponder {
+    
+    func updateViewState(_ state: SampleScreen_State) {
+        rootView.updateView(with: state)
+    }
+    
+    func updateName(_ name: String) {
+        manager.updateName(name)
     }
 }
