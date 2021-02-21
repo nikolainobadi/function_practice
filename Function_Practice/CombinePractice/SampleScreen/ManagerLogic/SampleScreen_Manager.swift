@@ -8,3 +8,12 @@
 class SampleScreen_Manager {
     
 }
+
+
+// MARK: - UIResponder
+extension SampleScreen_Manager: SampleScreen_UIResponder {
+    
+    func tryLogin() {
+        
+    }
+}
