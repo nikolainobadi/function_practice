@@ -7,6 +7,6 @@
 
 import Foundation
 
-class No_Way {
+class Help_Me {
     
 }
