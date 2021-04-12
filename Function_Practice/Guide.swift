@@ -25,6 +25,12 @@ protocol NamedObject {
 }
 
 
+// MARK: - Regular Class
+class Regular {
+    
+}
+
+
 // MARK: - Class Template
 class Guide: NamedObject {
 
